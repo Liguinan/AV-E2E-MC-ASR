@@ -1,1 +1,473 @@
-<h1> Hello ! </h1>
+<!DOCTYPE html>
+<html>
+<!-- figure {
+   display:table;
+}
+figure figcaption.title {
+   display:table-cell;
+   vertical-align:middle;
+}
+figure img {
+   display:table-cell;
+   width:60%;
+} -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Samples</title>
+  <style> 
+body {
+  margin: 0  auto；
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+audio {
+/*   width: 250px; */
+  width:150px;
+  margin-right: 10px;
+}
+.sample {
+  font-size: 0.9em;
+  font-style: italic;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<div style="border: none; width: 1000px; margin: 0 auto;">
+<body>
+    <h2 align="center">Audio-visual End-to-end Multi-channel Speech Separation, Dereverberation and Recognition</h2>
+<!--     <p style="line-height:100%", align="center"> <b>Authors: </b> Jianwei Yu, Shixiong Zhang, Jian Wu,  Shahram Ghorbani, Bo Wu, Shiyin Kang, Shansong Liu, Xunying Liu, Helen Meng, Dong Yu</p>
+    <p style="line-height:100%", align="justify"> <b>Abstract: </b> Automatic recognition of overlapped speech remains a highly challenging task to date. Motivated by the bimodal nature of human speech perception, this paper investigates the use of audio-visual technologies for overlapped speech recognition. Three issues associated with the construction of audio-visual speech recognition (AVSR) systems are addressed. First,  the basic architecture designs i.e. end-to-end and hybrid of AVSR systems are investigated. Second, purposefully designed modality fusion gates are used to robustly integrate the audio and visual features. Third, in contrast to a traditional pipelined architecture containing explicit speech separation and recognition components, a streamlined and integrated AVSR system optimized consistently using the lattice-free MMI (LF-MMI) discriminative criterion is also proposed. The proposed LF-MMI time-delay neural network (TDNN) system establishes the state-of-the-art for the LRS2 dataset. Experiments on overlapped speech simulated from the LRS2 dataset suggest the proposed AVSR system outperformed the audio only baseline LF-MMI DNN system by up to 29.98% absolute in word error rate (WER) reduction, and produced recognition performance comparable to a more complex pipelined system. Consistent performance improvements of 4.89% absolute in WER reduction over the baseline AVSR system using feature fusion are also obtained.</p> -->
+<!--   <h3>Piplined and integrated AVSR systems:</h3>
+  <p style="text-align:center"><img src="./image/pipeline.png"  alt="viusal modality driven gate" height="200"/></p>
+  <h3>Audio-viusal Speech Seperation Network Architecture:</h3>
+        
+  <figure>
+    <p style="text-align:center"><img src="./image/Seperation.jpg"  alt="viusal modality driven gate" height="350"/></p>
+<!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
+  </figure>
+  <ul>
+    <li> The overlapped speech is simulated from testing of LRS2 [1].</li>    
+    <li> The separation model is used in the pipelined AVSR system.</li>
+    <li> For audio-only separation, we used uPIT-BLSTM [2] model with three layer BLSTMs, dropout rate 0.5 and adopted PSM as training targets, which was proved better than IRM. 257-dimentional linear spectrogram (hop-size/window=10ms/hann) was extracted as input features. The model generates two separated results for two-speaker mixture and we choose the one with higher Si-SNR value of groundtruth target speech as the corresponding separated speech.</li>
+    <li> For audio-visual separation, the frequency-domain model [3] we presented here used 321-dimentional spectrogram (hop-size/window=10ms/hann) as audio feature and lip embedding extracted by the LipNet from the mouth region-of-interest (ROI) as visual feature. The model directly generated the separated TF-mask of the target speaker. </li>
+  </ul>
+  
+
+
+      <!-- MF -->
+    <h4>Seperated audio samples of -5dB mixture:</h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Audio-only separation</td>
+      <td>Audio-visual separation</td>
+      <td>Ground truth</td>
+<!--       <td>Text</td> -->
+    </tr>
+<!--     m5dB -->
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/mix/6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/m05/upit/6331559613336179781-00029.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/tavsnet/6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/transm5-6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+
+<!--       <td>advantageous</td> -->
+    </tr>
+       
+    <tr>
+      <td>2</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/mix/6331559613336179781-00036.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/m05/upit/6331559613336179781-00036.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/tavsnet/6331559613336179781-00036.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/transm5-6331559613336179781-00036.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/mix/6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/m05/upit/6331559613336179781-00019.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/m05/tavsnet/6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/transm5-6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   </table>
+<!--   ======================================================================================     -->
+    <h4>Seperated audio samples of 0dB mixture: </h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Audio-only separation</td>
+      <td>Audio-visual separation</td>
+      <td>Ground truth</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/mix/6352157417494386368-00050.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/0/upit/6352157417494386368-00050.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/tavsnet/6352157417494386368-00050.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans0-6352157417494386368-00050.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+       
+    <tr>
+      <td>2</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/mix/6352893145392128503-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/0/upit/6352893145392128503-00020.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/tavsnet/6352893145392128503-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans0-6352893145392128503-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/mix/6352498867394358158-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/0/upit/6352498867394358158-00019.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/0/tavsnet/6352498867394358158-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans0-6352498867394358158-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   </table>
+<!--   ======================================================================================     -->      
+    <h4>Seperated audio samples of 5dB mixture:</h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Audio-only separation</td>
+      <td>Audio-visual separation</td>
+      <td>Ground truth</td>
+    </tr>
+    
+     <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/mix/6390301881043558087-00025.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/5/upit/mix/6390301881043558087-00025.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/tavsnet/6390301881043558087-00025.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans5-6390301881043558087-00025.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+       
+    <tr>
+      <td>2</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/mix/6392525815109495392-00008.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/5/upit/mix/6392525815109495392-00008.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/tavsnet/6392525815109495392-00008.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans5-6392525815109495392-00008.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/mix/6392568335285725796-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/5/upit/mix/6392568335285725796-00013.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/5/tavsnet/6392568335285725796-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans5-6392568335285725796-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   </table>
+<!--   ======================================================================================     -->
+      
+    <h4>Seperated audio samples of 10dB mixture:</h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Audio-only separation</td>
+      <td>Audio-visual separation</td>
+      <td>Ground truth</td>
+    </tr>
+       
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/mix/6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/10/upit/6331559613336179781-00019.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/tavsnet/6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans10-6331559613336179781-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>       
+    <tr>
+      <td>2</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/mix/6331559613336179781-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/10/upit/6331559613336179781-00020.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/tavsnet/6331559613336179781-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans10-6331559613336179781-00020.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/mix/6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <audio controls>
+        <source src="demo3/10/upit/6331559613336179781-00029.wav" type="audio/wav">
+        </audio>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="demo3/10/tavsnet/6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="demo3/mp4-trans/trans10-6331559613336179781-00029.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+   </tr>
+   </table>
+   
+  
+   <h3> Si-SNR evaluation results of the separation system</h3>
+   <p style="text-align:center"><img src="./image/Si-SNR-NP.png"  alt="viusal modality driven gate" height="100"/></p>
+   
+   
+   
+    <h3>Integrated system architecture</h3>
+    <table align="center">
+    <tr>
+      <td><a><img src="image/FF-revise.png"  alt="viusal modality driven gate" height="300"/></a></td>
+      <td><a><img src="image/VM-revise.png"  alt="viusal modality driven gate" height="300" /></a></td>
+      <td><a><img src="image/AVM-revise.png"  alt="viusal modality driven gate" height="300"/></a></td>
+    </tr>
+    <tr align="center">
+      <td><a> (a) Feature concatenation (concat)</a></td>
+      <td><a> (b) Audio driven modality fusion gate (A&#8855V)</a></td>
+      <td><a> (c) Audio-visual driven modality fusion gate (AV&#8855V)</a></td>
+    </tr>
+    
+    </table>
+   
+   
+   <h3> Word Error Rate (WER) of Pipelined and Integrated Systems</h3>
+   <ul>
+    <li>"Multi" denotes multi-condition training data with separated speech and clean speech </li>    
+    <li>"Multi*" denotes multi-condition training data with overlapped and clean speech.</li>
+    <li>"concat" denotes feature concatenation.</li>
+    <li> "A&#8855V" denotes audio driven modality fusion gate;  "AV&#8855V" denotes audio-visual driven modality fusion gate;</li>
+   </ul>
+   <p style="text-align:center"><img src="./image/WER-Results.png"  alt="viusal modality driven gate" height="400"/></p>
+   
+   <h2>Reference</h2>
+   <p> [1] Noda K, Yamaguchi Y, Nakadai K, et al. Audio-visual speech recognition using deep learning[J]. Applied Intelligence, 2015, 42(4): 722-737.</p>
+   <p> [2] Kolbak M, Yu D, Tan Z H, et al. Multitalker speech separation with utterance-level permutation invariant training of deep recurrent neural networks[J]. IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP), 2017, 25(10): 1901-1913.</p>
+   <p> [3] Jian Wu,  Yong Xu,  Shi-Xiong Zhang,  Lian-Wu Chen,  MengYu, Lei Xie, and Dong Yu,  “Time domain audio visual speechseparation,”arXiv preprint arXiv:1904.03760, 2019.</p>
+     -->
+       
+</div>
+</body>
+</html>
