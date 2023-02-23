@@ -1,111 +1,821 @@
 <!DOCTYPE html>
 <html>
-<!-- figure {
-   display:table;
-}
-figure figcaption.title {
-   display:table-cell;
-   vertical-align:middle;
-}
-figure img {
-   display:table-cell;
-   width:60%;
-} -->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Audio Samples</title>
-  <style> 
-body {
-  margin: 0  auto；
-  padding:10px 30px;
-  background: #fff;
-  color: #111;
-  font-size: 15px;
-  font-family: "Times New Roman", serif;
-  font-weight: 400;
-  line-height: 1.8;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-audio {
-/*   width: 250px; */
-  width:150px;
-  margin-right: 10px;
-}
-.sample {
-  font-size: 0.9em;
-  font-style: italic;
-  border: 1px solid #ddd;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-</style>
+  <title>Audio-visual End-to-end Multi-channel Speech Separation, Dereverberation and Recognition</title>
+<!--  <style> -->
+<!--  body {-->
+<!--  margin: 0  auto；-->
+<!--  padding:10px 30px;-->
+<!--  background: #fff;-->
+<!--  color: #111;-->
+<!--  font-size: 15px;-->
+<!--  font-family: "Times New Roman", serif;-->
+<!--  font-weight: 400;-->
+<!--  line-height: 1.8;-->
+<!--  overflow-x: hidden;-->
+<!--  -webkit-font-smoothing: antialiased;-->
+<!--  }-->
+<!--  audio {-->
+<!--  width:150px;-->
+<!--  margin-right: 10px;-->
+<!--  }-->
+<!-- .sample {-->
+<!--  font-size: 0.9em;-->
+<!--  font-style: italic;-->
+<!--  border: 1px solid #ddd;-->
+<!--  padding: 1em;-->
+<!--  margin-bottom: 1em;-->
+<!-- }-->
+<!--</style>-->
 </head>
-<div style="border: none; width: 1000px; margin: 0 auto;">
+
+<!--<div style="border: none; width: 1000px; margin: 0 auto;">-->
 <body>
     <h2 align="center">Audio-visual End-to-end Multi-channel Speech Separation, Dereverberation and Recognition</h2>
     <h3> 1. Experimental Results on the Simulated LRS2 Mixture Speech </h3>
     <table border="1">
-        <tr>
-            <td>Angle difference ranges</td>
-            <td>[0°-15°)</td>
-            <td>[15°-45°)</td>
-            <td>[45°-90°)</td>
-            <td>[90°-180°)</td>
+    	<tr>
+        	<th rowspan="2" colspan="2"></th>
+        	<th colspan="4"> Angle difference ranges </th>
         </tr>
         <tr>
-            <td>Mixture speech</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
+            <th>[0°-15°)</th>
+            <th>[15°-45°)</th>
+            <th>[45°-90°)</th>
+            <th>[90°-180°)</th>
         </tr>
         <tr>
-            <td>Reverberant-only speech</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-        </tr>
-        <tr>
-            <td>Clean speech video</td>
-            <td>
-                <video controls width="150">
-                    <source src="simulated/0-15/3-clean/00011.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+            <th colspan="2"> Target speaker video</th>
+            <td style="text-align:center">
+                <video src="simulated/0-15/3-clean/00011.mp4" controls="controls">
+                    your browser does not support the video tag
                 </video>
             </td>
-            <td>video</td>
-            <td>video</td>
-            <td>video</td>
+            <td style="text-align:center">
+                <video src="simulated/0-15/3-clean/00011.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src="simulated/0-15/3-clean/00011.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src="simulated/0-15/3-clean/00011.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
         </tr>
         <tr>
-            <td>Clean speech spectrum </td>
+            <th colspan="2">Mixture</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
             </td>
-            <td>spectrum</td>
-            <td>spectrum</td>
-            <td>spectrum</td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <td>Clean speech wav </td>
-            <td>
-                <audio controls>
-                    <source src="simulated/0-15/3-clean/00011.wav" type="audio/wav">
-                 </audio>
+            <th colspan="2">Reverberant-only</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
             </td>
-            <td>wav</td>
-            <td>wav</td>
-            <td>wav</td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">Clean</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
 
-
-    </table>>
-
+        <tr>
+            <th rowspan="2">[1] Audio-only Mask-based MVDR</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[2] Audio-visual Mask-based MVDR</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[3] Audio-only Mask-based MVDR -> DNN-WPE</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[4] Audio-visual Mask-based MVDR -> DNN-WPE</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+       <tr>
+            <th rowspan="2">[5] Audio-only Mask-based MVDR -> SpecM</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[6] Audio-visual Mask-based MVDR -> SpecM</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+       <tr>
+            <th rowspan="2">[7] Audio-only DNN-WPE -> Mask-based MVDR </th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[8] Audio-visual DNN-WPE -> Mask-based MVDR</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[9] Audio-only SpecM -> Mask-based MVDR </th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[10] Audio-visual SpecM -> Mask-based MVDR</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[11] Audio-only Mask-based WPD </th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">[12] Audio-visual Mask-based WPD</th>
+            <th>(a) pipelined</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>(b) joint fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/0-15/3-clean/00011.png" alt>
+                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+    </table>
     <h3> 2. Experimental Results on the Replayed LRS2 Mixture Speech </h3>
     <h3> updating ... </h3>
-</div>
 </body>
+<!--</div>-->
+
 </html>
+
