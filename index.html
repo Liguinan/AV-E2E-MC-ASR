@@ -17,14 +17,14 @@
 <!--  -webkit-font-smoothing: antialiased;-->
 <!--  }-->
   audio {
-  width:150px;
+  width: 75%;
   height:30px;
   }
   img {
-  width:280px;
+  width:100%;
   }
   video {
-  width:220px;
+  width:75%;
   }
   html{
   height:100%;
@@ -41,7 +41,7 @@
     <table border="1">
     	<tr>
         	<th rowspan="2" colspan="2"></th>
-        	<th colspan="4"> Angle difference ranges </th>
+        	<th colspan="4"> Four ranges of the angle difference between the target and interfering speakers relative to the microphone array </th>
         </tr>
         <tr>
             <th>[0°-15°)</th>
@@ -72,30 +72,6 @@
                 </video>
             </td>
         </tr>
-<!--          </tr>-->
-<!--           <tr>-->
-<!--            <th colspan="2"> Target speaker video</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/official_clean/00019.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/official_clean/00027.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/official_clean/00029.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/official_clean/00036.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--        </tr>-->
         <tr>
             <th colspan="2">Mixture</th>
             <td style="text-align:center">
@@ -178,8 +154,8 @@
             </td>
         </tr>
         <tr>
-            <th rowspan="2">[1] Audio-only Mask-based MVDR</th>
-            <th>(a) pipelined</th>
+            <th rowspan="2" width="10%">[1] Audio-only <br>Mask-based MVDR</th>
+            <th width="7%">(a) pipelined</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019.png" alt>
                 <audio src="simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -206,7 +182,7 @@
             </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
+            <th>(b) joint <br> fine-tuned</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019.png" alt>
                 <audio src="simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -233,7 +209,7 @@
             </td>
         </tr>
         <tr>
-            <th rowspan="2">[2] Audio-visual Mask-based MVDR</th>
+            <th rowspan="2">[2] Audio-visual <br> Mask-based MVDR</th>
             <th>(a) pipelined</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/2-av-mvdr-only/pipelined/rev1-6331559613336179781-00019.png" alt>
@@ -261,7 +237,7 @@
             </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
+            <th>(b) joint <br> fine-tuned</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019.png" alt>
                 <audio src="simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -288,7 +264,7 @@
             </td>
         </tr>
         <tr>
-            <th rowspan="2">[3] Audio-only Mask-based MVDR -> DNN-WPE</th>
+            <th rowspan="2">[3] Audio-only <br> Mask-based MVDR <br> -> DNN-WPE</th>
             <th>(a) pipelined</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.png" alt>
@@ -316,7 +292,7 @@
             </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
+            <th>(b) joint <br> fine-tuned</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/3-ao-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.png" alt>
                 <audio src="simulated/0-15/3-ao-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -343,7 +319,7 @@
             </td>
         </tr>
         <tr>
-            <th rowspan="2">[4] Audio-visual Mask-based MVDR -> DNN-WPE</th>
+            <th rowspan="2">[4] Audio-visual <br> Mask-based MVDR <br> -> DNN-WPE</th>
             <th>(a) pipelined</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/4-av-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.png" alt>
@@ -371,7 +347,7 @@
             </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
+            <th>(b) joint <br> fine-tuned</th>
             <td style="text-align:center">
                 <img src="simulated/0-15/4-av-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.png" alt>
                 <audio src="simulated/0-15/4-av-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -398,444 +374,444 @@
             </td>
         </tr>
        <tr>
-            <th rowspan="2">[5] Audio-only Mask-based MVDR -> SpecM</th>
+            <th rowspan="2">[5] Audio-only <br> Mask-based MVDR <br> -> SpecM</th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/5-ao-mvdr-specm/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/5-ao-mvdr-specm/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/5-ao-mvdr-specm/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/5-ao-mvdr-specm/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/5-ao-mvdr-specm/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/5-ao-mvdr-specm/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/5-ao-mvdr-specm/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/5-ao-mvdr-specm/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/5-ao-mvdr-specm/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/5-ao-mvdr-specm/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/5-ao-mvdr-specm/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/5-ao-mvdr-specm/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/5-ao-mvdr-specm/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/5-ao-mvdr-specm/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/5-ao-mvdr-specm/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/5-ao-mvdr-specm/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[6] Audio-visual Mask-based MVDR -> SpecM</th>
+            <th rowspan="2">[6] Audio-visual <br> Mask-based MVDR <br> -> SpecM</th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/6-av-mvdr-specm/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/6-av-mvdr-specm/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/6-av-mvdr-specm/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/6-av-mvdr-specm/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/6-av-mvdr-specm/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/6-av-mvdr-specm/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/6-av-mvdr-specm/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/6-av-mvdr-specm/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/6-av-mvdr-specm/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/6-av-mvdr-specm/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/6-av-mvdr-specm/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/6-av-mvdr-specm/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/6-av-mvdr-specm/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/6-av-mvdr-specm/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/6-av-mvdr-specm/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/6-av-mvdr-specm/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
        <tr>
-            <th rowspan="2">[7] Audio-only DNN-WPE -> Mask-based MVDR </th>
+            <th rowspan="2">[7] Audio-only <br> DNN-WPE -> <br> Mask-based MVDR </th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/7-ao-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/7-ao-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/7-ao-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/7-ao-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/7-ao-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/7-ao-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/7-ao-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/7-ao-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/7-ao-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/7-ao-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/7-ao-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/7-ao-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/7-ao-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/7-ao-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[8] Audio-visual DNN-WPE -> Mask-based MVDR</th>
+            <th rowspan="2">[8] Audio-visual <br> DNN-WPE -> <br> Mask-based MVDR</th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/8-av-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/8-av-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/8-av-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/8-av-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/8-av-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/8-av-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/8-av-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/8-av-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/8-av-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/8-av-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/8-av-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/8-av-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/8-av-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/8-av-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/8-av-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/8-av-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[9] Audio-only SpecM -> Mask-based MVDR </th>
+            <th rowspan="2">[9] Audio-only <br> SpecM -> <br> Mask-based MVDR </th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/9-ao-specm-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/9-ao-specm-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/9-ao-specm-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/9-ao-specm-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/9-ao-specm-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/9-ao-specm-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/9-ao-specm-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/9-ao-specm-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/9-ao-specm-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/9-ao-specm-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/9-ao-specm-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/9-ao-specm-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/9-ao-specm-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/9-ao-specm-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/9-ao-specm-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/9-ao-specm-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[10] Audio-visual SpecM -> Mask-based MVDR</th>
+            <th rowspan="2">[10] Audio-visual <br> SpecM -> <br> Mask-based MVDR</th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/10-av-specm-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/10-av-specm-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/10-av-specm-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/10-av-specm-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/10-av-specm-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/10-av-specm-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/10-av-specm-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/10-av-specm-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/10-av-specm-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/10-av-specm-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/10-av-specm-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/10-av-specm-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/10-av-specm-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/10-av-specm-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/10-av-specm-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/10-av-specm-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[11] Audio-only Mask-based WPD </th>
+            <th rowspan="2">[11] Audio-only <br> Mask-based WPD </th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/11-ao-wpd/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/11-ao-wpd/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/11-ao-wpd/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/11-ao-wpd/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/11-ao-wpd/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/11-ao-wpd/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/11-ao-wpd/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/11-ao-wpd/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/11-ao-wpd/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/11-ao-wpd/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/11-ao-wpd/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/11-ao-wpd/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/11-ao-wpd/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/11-ao-wpd/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/11-ao-wpd/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/11-ao-wpd/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
         <tr>
-            <th rowspan="2">[12] Audio-visual Mask-based WPD</th>
+            <th rowspan="2">[12] Audio-visual <br> Mask-based WPD</th>
             <th>(a) pipelined</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <td style="text-align:center">
+                <img src="simulated/0-15/12-av-wpd/pipelined/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/12-av-wpd/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/12-av-wpd/pipelined/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/12-av-wpd/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/12-av-wpd/pipelined/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/12-av-wpd/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/12-av-wpd/pipelined/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/12-av-wpd/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
          <tr>
-            <th>(b) joint fine-tuned</th>
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-clean/00011.png" alt>-->
-<!--                <audio src="simulated/0-15/3-clean/00011.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
+            <th>(b) joint <br> fine-tuned</th>
+            <td style="text-align:center">
+                <img src="simulated/0-15/12-av-wpd/joint2/rev1-6331559613336179781-00019.png" alt>
+                <audio src="simulated/0-15/12-av-wpd/joint2/rev1-6331559613336179781-00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/15-45/12-av-wpd/joint2/rev2-6331559613336179781-00027.png" alt>
+                <audio src="simulated/15-45/12-av-wpd/joint2/rev2-6331559613336179781-00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/45-90/12-av-wpd/joint2/rev3-6331559613336179781-00029.png" alt>
+                <audio src="simulated/45-90/12-av-wpd/joint2/rev3-6331559613336179781-00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="simulated/90-180/12-av-wpd/joint2/rev4-6332062124509813446-00018.png" alt>
+                <audio src="simulated/90-180/12-av-wpd/joint2/rev4-6332062124509813446-00018.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
         </tr>
     </table>
     </div>
