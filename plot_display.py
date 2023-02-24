@@ -61,22 +61,40 @@ def print_figure(name):
 # print_figure(name4)
 
 
-# [1] ao-mvdr-only pipelined
-name1 = "simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019"
-print_figure(name1)
-name2 = "simulated/15-45/1-ao-mvdr-only/pipelined/rev2-6331559613336179781-00027"
-print_figure(name2)
-name3 = "simulated/45-90/1-ao-mvdr-only/pipelined/rev3-6331559613336179781-00029"
-print_figure(name3)
-name4 = "simulated/90-180/1-ao-mvdr-only/pipelined/rev4-6332062124509813446-00018"
-print_figure(name4)
-# [1] ao-mvdr-only joint2
-name1 = "simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019"
-print_figure(name1)
-name2 = "simulated/15-45/1-ao-mvdr-only/joint2/rev2-6331559613336179781-00027"
-print_figure(name2)
-name3 = "simulated/45-90/1-ao-mvdr-only/joint2/rev3-6331559613336179781-00029"
-print_figure(name3)
-name4 = "simulated/90-180/1-ao-mvdr-only/joint2/rev4-6332062124509813446-00018"
-print_figure(name4)
+# # [1] ao-mvdr-only pipelined
+# name1 = "simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019"
+# print_figure(name1)
+# name2 = "simulated/15-45/1-ao-mvdr-only/pipelined/rev2-6331559613336179781-00027"
+# print_figure(name2)
+# name3 = "simulated/45-90/1-ao-mvdr-only/pipelined/rev3-6331559613336179781-00029"
+# print_figure(name3)
+# name4 = "simulated/90-180/1-ao-mvdr-only/pipelined/rev4-6332062124509813446-00018"
+# print_figure(name4)
+# # [1] ao-mvdr-only joint2
+# name1 = "simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019"
+# print_figure(name1)
+# name2 = "simulated/15-45/1-ao-mvdr-only/joint2/rev2-6331559613336179781-00027"
+# print_figure(name2)
+# name3 = "simulated/45-90/1-ao-mvdr-only/joint2/rev3-6331559613336179781-00029"
+# print_figure(name3)
+# name4 = "simulated/90-180/1-ao-mvdr-only/joint2/rev4-6332062124509813446-00018"
+# print_figure(name4)
 
+# [2] av-mvdr-only pipelined
+name1 = "simulated/0-15/2-av-mvdr-only/pipelined/rev1-6331559613336179781-00019"
+print_figure(name1)
+name2 = "simulated/15-45/2-av-mvdr-only/pipelined/rev2-6331559613336179781-00027"
+print_figure(name2)
+name3 = "simulated/45-90/2-av-mvdr-only/pipelined/rev3-6331559613336179781-00029"
+print_figure(name3)
+name4 = "simulated/90-180/2-av-mvdr-only/pipelined/rev4-6332062124509813446-00018"
+print_figure(name4)
+# [1] av-mvdr-only joint2
+name1 = "simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019"
+print_figure(name1)
+name2 = "simulated/15-45/2-av-mvdr-only/joint2/rev2-6331559613336179781-00027"
+print_figure(name2)
+name3 = "simulated/45-90/2-av-mvdr-only/joint2/rev3-6331559613336179781-00029"
+print_figure(name3)
+name4 = "simulated/90-180/2-av-mvdr-only/joint2/rev4-6332062124509813446-00018"
+print_figure(name4)
