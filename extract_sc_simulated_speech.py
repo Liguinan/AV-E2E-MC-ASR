@@ -27,3 +27,9 @@ def extract_single_channel_wav(fpath, fname):
 # name = "00018"
 # extract_single_channel_wav(path, name)
 
+
+# simulated
+# rev1-6331559613336179781-00019
+# rev2-6331559613336179781-00027
+# rev3-6331559613336179781-00029
+# rev4-6332062124509813446-00018
