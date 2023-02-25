@@ -49,17 +49,21 @@
     <h2 align="center">Audio-visual End-to-end Multi-channel Speech Separation, Dereverberation and Recognition</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> Guinan Li, Jiajun Deng, Mengzhe Geng, Zengrui Jin, Tianzi Wang, Shujie Hu, Mingyu Cui, Helen Meng, Xunying Liu</p>
     <p style="line-height:100%" align="justify"> <b>Abstract: </b> Accurate recognition of cocktail party speech containing overlapping speakers, noise and reverberation remains a highly challenging task to date. Motivated by the invariance of visual modality to acoustic signal corruption, an audio-visual multi-channel speech separation, dereverberation and recognition approach featuring a full incorporation of visual information into all system components is proposed in this paper. The efficacy of the video input is consistently demonstrated in mask-based MVDR speech separation, DNN-WPE or spectral mapping (SpecM) based speech dereverberation front-end and Conformer ASR back-end. Audio-visual integrated front-end architectures performing speech separation and dereverberation in a pipelined or joint fashion via mask-based WPD are investigated. The error cost mismatch between the speech enhancement front-end and ASR back-end components is minimized by end-to-end jointly fine-tuning using either the ASR cost function alone, or its interpolation with the speech enhancement loss. Experiments were conducted on the mixture overlapped and reverberant speech data constructed using simulation or replay of the Oxford LRS2 dataset. The proposed audio-visual multi-channel speech separation, dereverberation and recognition systems consistently outperformed the comparable audio-only baseline by 9.1% and 6.2% absolute (41.7% and 36.0% relative) word error rate (WER) reductions. Consistent speech enhancement improvements were also obtained on PESQ, STOI and SRMR scores.</p>
-    <h3>I. Three Audio-visual Multi-channel Speech Enhancement Front-end Architectures</h3>
+    <a href="#sectionI">I. Three Audio-visual Multi-channel Speech Enhancement Front-end Architectures</a><br>
+    <a href="#sectionII">II. End-to-end Audio-visual Mulit-channel Speech Separaiton, Dereverberation and Recognition System</a><br>
+    <a href="#sectionIII">III. Experimental Setup and Results</a><br>
+    <a href="#sectionIV">IV. Reference</a>
+    <h3> <a name="sectionI"> I. Three Audio-visual Multi-channel Speech Enhancement Front-end Architectures</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
     <img border="0" src="architectures.png" alt="architectures of speech enhancement front-end" height="10%">
     </div>
     <ul>
-        <li> In the architecture-1, speech separaiton (based on the mask-based MVDR [1]) followed by dereverberation (based on the DNN-WPE [2] or SpecM [3]).</li>
-        <li> In the architecture-2, speech dereverberation (based on the DNN-WPE or SpecM) followed by separation (based on the mask-based MVDR).</li>
-        <li> In the architecture-3, joint speech separation & dereverberation using mask-based WPD [4]. </li>
-        <li> The internal structural details of mask-based MVDR, DNN-WPE, SpecM and mask-based WPD as well as the Visual Front-end modules can be seen in this paper.  </li>
+        <li> In the architecture-1, speech separaiton (based on the audio-visual mask-based MVDR [1]) followed by dereverberation (based on the audio-visual DNN-WPE or SpecM [2]).</li>
+        <li> In the architecture-2, speech dereverberation (based on the audio-visual DNN-WPE or SpecM) followed by separation (based on the audio-visual mask-based MVDR).</li>
+        <li> In the architecture-3, joint speech separation & dereverberation using the audio-visual mask-based WPD. </li>
+        <li> The internal structural details of audio-visual mask-based MVDR, DNN-WPE, SpecM and mask-based WPD as well as the Visual Front-end modules can be seen in  Fig. 1 and Fig. 3 of the submitted paper.  </li>
     </ul>
-    <h3>II. End-to-end Audio-visual Mulit-channel Speech separaiton, dereverberation and recognition system</h3>
+    <h3> <a name="sectionII">II. End-to-end Audio-visual Mulit-channel Speech Separaiton, Dereverberation and Recognition System </a> </h3>
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="asr.png" alt="architectures of speech enhancement front-end" height="20%">
     </div>
@@ -69,15 +73,15 @@
         <li> End-to-end jointly fine-tuning the entire system including the speech enhancement front-end and the recognition back-end components using the ASR cost function. </li>
         <li> End-to-end jointly fine-tuning the entire system using a multi-task criterion interpolation between the speech enhancement and recognition cost functions. </li>
     </ul>
-    <h3>III. Experimental setup and results</h3>
+    <h3> <a name="sectionIII">III. Experimental Setup and Results</a></h3>
     <div style="border: none; width:100%; margin: 0 auto;">
     <h4> A. Experimental setup </h4>
         <ul>
-            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped-reverberant-noisy mixture speech using the Oxford LRS2 dataset [5] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
-            <li> 1200 (0.5 hours) utterances are recorded by replaying two loudspeakers simultaneously to generate a 15-channel overlapped-reverberant-noisy mixture speech in a meeting room [6], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
-            <li> Espnet style Conformer AED ASR model [7] contains 12 encoder and 6 decoder layer is used in this paper. </li>
+            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped-reverberant-noisy mixture speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
+            <li> 1200 (0.5 hours) utterances are recorded by replaying two loudspeakers simultaneously to generate a 15-channel overlapped-reverberant-noisy mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
+            <li> Espnet style Conformer AED ASR model [4] contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
         </ul>
-    <h4> B. Experimental results of Speech Enhancement front-end outputs on the Simulated LRS2 Mixture Speech </h4>
+    <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>
     <table border="1">
     	<tr>
         	<th rowspan="2" colspan="2"></th>
@@ -855,7 +859,7 @@
         </tr>
     </table>
     </div>
-    <h4> C. Experimental results of Speech Enhancement front-end outputs on the Replayed LRS2 Mixture Speech </h4>
+    <h4> C. Experimental results of speech enhancement front-end outputs on the replayed LRS2 mixture speech </h4>
     <div style="border: none; width:80%; margin: 0 auto;">
     <table border="1">
     	<tr>
@@ -1445,14 +1449,11 @@
         </tr>
     </table>
     </div>
-<h3>IV. Reference</h3>
-<p> [1] T. Yoshioka et al., “Recognizing overlapped speech in meetings: A multichannel separation approach using neural networks,” in INTERSPEECH, 2018, pp. 3038–3042.</p>
-<p> [2] K. Kinoshita et al., “Neural network-based spectrum estimation for online wpe dereverberation.” in INTERSPEECH, 2017, pp. 384–388.</p>
-<p> [3] G. Li et al., “Audio-visual multi-channel speech separation, dereverberation and recognition,” in ICASSP, 2022, pp. 6042–6046.</p>
-<p> [4] W. Zhang et al., “End-to-end dereverberation, beamforming, and speech recognition in a cocktail party,” IEEE-ACM T AUDIO SPE, vol. 30, pp. 3173-3188, 2022.</p>
-<p> [5] J. Son Chung et al., “Lip reading sentences in the wild,” in IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp. 6447–6456. </p>
-<p> [6] J. Yu et al., “Audio-visual multi-channel recognition of overlapped speech,” in INTERSPEECH, 2020, pp. 3496–3500.</p>
-<p> [7] A. Gulati et al., “Conformer: Convolution-augmented transformer for speech recognition,” in INTERSPEECH, 2020, pp. 5036–5040</p>
+<h3><a name="sectionIV">IV. Reference</a></h3>
+<p> [1] J. Yu et al., “Audio-visual multi-channel recognition of overlapped speech,” in INTERSPEECH, 2020, pp. 3496–3500.</p>
+<p> [2] G. Li et al., “Audio-visual multi-channel speech separation, dereverberation and recognition,” in ICASSP, 2022, pp. 6042–6046.</p>
+<p> [3] J. Son Chung et al., “Lip reading sentences in the wild,” in IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp. 6447–6456. </p>
+<p> [4] A. Gulati et al., “Conformer: Convolution-augmented transformer for speech recognition,” in INTERSPEECH, 2020, pp. 5036–5040</p>
 
 
 </body>
