@@ -1,0 +1,7 @@
+nohup: ignoring input
+wav_scp_path=/project_bdda7/bdda/tzhong/projects/Speech-Enhancement-Compression/data/wav_scp/wav.scp
+featdir=/project_bdda7/bdda/tzhong/projects/Speech-Enhancement-Compression/data/featdir
+[INFO] wav.*.scp --> feats.scp, feats.*.ark ...
+[INFO] log in /project_bdda7/bdda/tzhong/projects/Speech-Enhancement-Compression/data/featdir/logs/wavcopy.*.log
+
+Done

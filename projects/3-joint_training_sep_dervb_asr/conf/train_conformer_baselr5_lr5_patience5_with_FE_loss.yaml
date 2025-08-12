@@ -1,0 +1,84 @@
+# network architecture
+# encoder related
+elayers: 12
+eunits: 2048
+# decoder related
+dlayers: 6
+dunits: 2048
+# attention related
+adim: 256
+aheads: 4
+
+# hybrid CTC/attention
+mtlalpha: 0.3
+
+# label smoothing
+lsm-weight: 0.1
+
+# minibatch related
+batch-size: 24
+maxlen-in: 512  # if input length  > maxlen-in, batchsize is automatically reduced
+maxlen-out: 150 # if output length > maxlen-out, batchsize is automatically reduced
+
+# optimization related
+sortagrad: 0 # Feed samples from shortest to longest ; -1: enabled for all epochs, 0: disabled, other: enabled for 'other' epochs
+opt: noam
+accum-grad: 2
+grad-clip: 5
+patience: 5
+epochs: 100
+dropout-rate: 0.1
+
+# transformer specific setting
+backend: pytorch
+model-module: "espnet.JT_training.e2e_asr_conformer:E2E"
+transformer-input-layer: conv2d     # encoder architecture type
+transformer-lr: 5.0
+transformer-warmup-steps: 25000
+transformer-attn-dropout-rate: 0.0
+transformer-length-normalized-loss: false
+transformer-init: pytorch
+
+# conformer specific setting
+transformer-encoder-pos-enc-layer-type: rel_pos
+transformer-encoder-selfattn-layer-type: rel_selfattn
+transformer-encoder-activation-type: swish
+macaron-style: true
+use-cnn-module: true
+cnn-module-kernel: 31
+
+n-iter-processes: 12
+
+############# customized #############
+# visual pca
+asr-use-visual: true
+use-pca: true
+vidim: 80
+
+use-frontend-loss: true
+tuned-weight: 1
+# frontend related
+use-frontend: true
+# use-beamforming-first: true
+# beamforming
+use-beamformer: true
+beamformer-type: mvdr  # wpd
+# wpe
+use-dwpe: true
+
+## when beamformer-type=mvdr, set use-clean-ref=False when joint two loss training;
+## when beamformer-type=mvdr, set use-clean-ref=True when to check the sisnr loss compared with pipeline results.
+##  others to derevb: True
+use-clean-ref: true
+
+## init front-end mvdr model 
+mvdr-frozen: false
+init-frontend-mvdr: ./local/JT_training/frontends/sep2/summary_sys24_av_DWPE_av_lipemb-LPS+IPD+AF-SISNR+SISNR_NOISE/model_mvdr-AF_premasking=False-BS=32-DL=1e-5_dl=1e-6_taps=2/uTGT-LPS_IPD_AF-b32-BN-fd1-fixTrue-f0-cosTrue-sinFalse-best-65.pt.tar
+
+## init front-end wpe model
+wpe-frozen: false
+init-frontend-wpe: ./local/JT_training/frontends/dervb2/DWPE/summary_sys20_dervb_add_visual-True/model_dnn-wpe_pf-1e-10_scale_by_mixture-False_hop_size-128/b64-best-26.pt.tar
+
+## init Back end asr model
+asr-frozen: false
+init-asr: ../T4-sys25_avsr_online_av_wpe+av_mvdr/exp/pretrain_Train_pytorch_train_conformer_lr5_patience5/results/model.val5.avg.best
